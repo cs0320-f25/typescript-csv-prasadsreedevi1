@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "run": "npx ts-node ./src/run-parser.ts"
+    "run": "npx ts-node ./src/run-parser.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
