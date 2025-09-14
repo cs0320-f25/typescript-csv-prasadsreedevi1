@@ -34,8 +34,17 @@ export async function parseCSV<T>(path: string, schema: z.ZodType<T> | undefined
 
   for await (const line of rl) {
     const safeValue = schema?.safeParse(line);
-    const values = line.split(",").map((v) => v.trim());
-    resultStr.push(values)
+    if(safeValue?.success) {
+      result.push(safeValue.data);
+    }else{
+      const values = line.split(",").map((v) => v.trim());
+      resultStr.push(values);
+    }
+
+    
   }
-  return result
+  if (resultStr.length !== 0){
+    return resultStr;
+  }
+  return result;
 }

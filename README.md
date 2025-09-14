@@ -23,7 +23,20 @@
 
     Include your notes from above: what were your initial ideas, what did the LLM suggest, and how did the results differ by prompt? What resonated with you, and what didn’t? (3-5 sentences.) 
 
-    The first idea and second were my initial ones, and the LLM suggested it as well.
+
+    3) Extensibility
+    As a user, I want to specify a custom delimiter (like a semicolon), so that I can parse non-standard CSV files.
+    Acceptance Criteria:
+        -The parser takes in a delimiter option
+        -The parsing logic follows that chosen delimiter
+
+    4) Extensibility
+    As a developer, I want to parse large CSV files efficiently, so my app doesn't run out of memory.
+    Acceptance Criteria:
+        - The parser can process files line-by-line or in chunks.
+        - The API supports async iteration or callbacks for each row
+    
+    The first idea and second were my initial ones, and the LLM suggested modified versions of them as well. I ignored suggestions such as non-UTF8 encoded files and flexible input options (passing in something other than a file path). I noticed that before I tweaked the prompt, I was getting too many suggestions that deviated far from the original structure/intention of the parser.
 ### Design Choices
 
 ### 1340 Supplement
@@ -40,5 +53,5 @@
 #### Team members and contributions (include cs logins):
 
 #### Collaborators (cslogins of anyone you worked with on this project and/or generative AI):
-#### Total estimated time it took to complete project:
+#### Total estimated time it took to complete project: 4 hrs
 #### Link to GitHub Repo:  
