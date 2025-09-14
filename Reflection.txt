@@ -1,0 +1,14 @@
+1) A CSV parser is "correct" if rows representing data points are appropriately converted into the
+objects they are meant to represent. Values within one object shouldn't be split up, or combined with
+another object. Additionally, slightly different inputs, such as quoted words within a line of the CSV,
+or extra commas/new lines, shouldn't break the existing functionality of the parser.
+
+2) I would first use this random data on all of my existing tests. Then, I'm likely to catch more edge
+cases that I didn't see before with data I myself generated. I could then go and write a more robust testing
+suite to cover all of these cases.
+
+3) I don't have much experience with TypeScript, and this was my first time working with Zod, which made this
+sprint much different than programming work I've done in the past. I encountered a few bugs when specifying
+types for the parameters/return of the CSV Parser function. I was able to fix these by consulting EdStem
+and course TypeScript resources to clarify my understanding of generic types and specifying multiple options
+for return type.
